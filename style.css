@@ -1,0 +1,33 @@
+    .success,
+    .error {
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+        }
+
+    .success {
+        background: green;
+        }
+
+    .error {
+        background: red;
+        }
+    .remove{
+        background-color:rgb(209, 206, 206);
+        margin-top: 1rem;
+        }
+   
+    .remove a{
+        text-decoration: none;
+        color: black;
+        }
+    .result{
+        width: 98%;
+        padding:0.7rem;
+        border-radius: 10px;
+        background-color:rgb(90, 192, 90);
+        color:black;
+        text-align: center;
+    }
+    
+    
