@@ -1,3 +1,4 @@
+//Selectors
 let titleText = document.querySelector("#title");
 let authorText = document.querySelector("#author");
 let isbnText = document.querySelector("#isbn");
@@ -5,7 +6,7 @@ let submitButton = document.getElementsByTagName("input")[3];
 let listArea = document.querySelector("#book-list");
 let resultDiv = document.querySelector(".resultDiv");
 
-
+//events and functions
 submitButton.addEventListener("click", (e)=>{
     e.preventDefault();
     if (titleText.value === '' || authorText.value === '' || isbnText.value === '') {
