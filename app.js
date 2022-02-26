@@ -3,6 +3,7 @@ let authorText = document.querySelector("#author");
 let isbnText = document.querySelector("#isbn");
 let submitButton = document.getElementsByTagName("input")[3];
 let listArea = document.querySelector("#book-list");
+let resultDiv = document.querySelector(".resultDiv");
 
 
 submitButton.addEventListener("click", (e)=>{
@@ -31,7 +32,7 @@ submitButton.addEventListener("click", (e)=>{
     isbnList.innerText += isbnText.value;
 
     let deletebutton = document.createElement("button");
-    deletebutton.innerHTML = `<a href="#" class="remove">X</a>`;
+    deletebutton.innerHTML = `<a href="#" class="remove">SİL</a>`;
     deletebutton.classList.add("remove");
     // isbnList.appendChild(deletebutton);
     newRow.appendChild(deletebutton);
@@ -42,13 +43,30 @@ submitButton.addEventListener("click", (e)=>{
     titleText.value = '';
     authorText.value = '';
     isbnText.value = '';
+
+    let result = document.createElement("p");
+    resultDiv.appendChild(result);
+    result.classList.add("result")
+    result.innerText = "Başarıyla eklendi."
+    
+    setInterval(() => {
+      result.remove();
+    }, 2000);
 })
 
-//remove book list
+//remove book list and give a removed message
 listArea.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove")) {
       event.target.parentElement.parentElement.remove();
+      
+      let result = document.createElement("p");
+      resultDiv.appendChild(result);
+      result.classList.add("result")
+      result.innerText = "Başarıyla silindi."
+      
+      setInterval(() => {
+        result.remove();
+      }, 2000);
+
     }
   });
-  
-
